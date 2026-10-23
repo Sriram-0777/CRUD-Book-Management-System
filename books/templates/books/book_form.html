@@ -1,0 +1,51 @@
+
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+<h2>{{ heading }}</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <p>
+        <label for="title">Book Title:</label><br>
+        <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter book title"
+            required
+        >
+    </p>
+
+    <p>
+        <label for="author">Author Name:</label><br>
+        <input
+            type="text"
+            id="author"
+            name="author"
+            placeholder="Enter author name"
+            required
+        >
+    </p>
+
+    <p>
+        <label for="price">Book Price (₹):</label><br>
+        <input
+            type="number"
+            id="price"
+            name="price"
+            placeholder="Enter book price"
+            min="0"
+            step="0.01"
+            required
+        >
+    </p>
+
+    <button type="submit">Save Book</button>
+
+    <a href="{% url 'book_list' %}">Back to Books</a>
+</form>
+
+{% endblock %}

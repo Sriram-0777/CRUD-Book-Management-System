@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books Management System</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f5f9;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #174a7e;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        a, button {
+            background: #1769aa;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .delete {
+            background: #d93025;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        input {
+            padding: 8px;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Books Management System</h1>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
